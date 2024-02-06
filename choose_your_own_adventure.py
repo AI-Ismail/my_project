@@ -1,5 +1,5 @@
 name = input("Type your Name: ")
-print("Welcome", name, "to this adventure game")
+print("Welcome to ", name, "to this adventure game")
 answer = input("you are on dangours road and you have to decide either you right/left which way you go? ").lower()
 if answer == "left":
     answer = input("You came to forest you walk to walk and swim to swim:")

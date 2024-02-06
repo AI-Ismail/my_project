@@ -9,7 +9,7 @@ key = load_key() + master_pwd.encode()
 fer = Fernet(key)
 
 def view():
-    with open("passwords.txt", "r") as f:
+    with open("passwords.txt", "a") as f:
         for line in f.readlines():
             data = line.rstrip()
             user, passw = data.split("|")

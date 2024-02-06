@@ -18,8 +18,11 @@ while True:
     # rock: 0, paper: 1, scissors: 2
     computer_pick = options[random_number]
     print("Computer picked", computer_pick + ".")
+    if user_input == computer_pick:
+        print("it'is a draw")
+        draw =+ 1
 
-    if user_input == "rock" and computer_pick == "scissors":
+    elif user_input == "rock" and computer_pick == "scissors":
         print("You won!")
         user_wins += 1
 
@@ -30,15 +33,16 @@ while True:
     elif user_input == "scissors" and computer_pick == "paper":
         print("You won!")
         user_wins += 1
-    elif user_input == "rock" and computer_pick == "rock":
-        print("draw")
-        draw += 1
-    elif user_input == "paper" and computer_pick == "paper":
-        print("draw")
-        draw += 1
-    elif user_input == "scissors" and computer_pick == "scissors":
-        print("draw")
-        draw += 1
+  #  elif user_input == "rock" and computer_pick == "rock":
+    #    print("draw")
+        # draw += 1
+   # elif user_input == "paper" and computer_pick == "paper":
+     #   print("draw")
+        # draw += 1
+    # elif user_input == "scissors" and computer_pick == "scissors":
+    #     print("draw")
+    #     draw += 1
+    
 
 
     else:
