@@ -1,0 +1,8 @@
+repos:
+  - repo: https://github.com/psf/black-pre-commit-mirror
+    rev: 24.2.0  # Adjust the version as needed
+    hooks:
+      - id: black
+        language_version: python3
+        args:
+          - "--check"  # Only check code formatting, don't modify files

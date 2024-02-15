@@ -26,6 +26,14 @@ else:
 answer = input("What Does gps? ")
 if answer.lower() == "global positioning system":
     print("You got Correct!")
+  
+  
+  
+  
+  
+  
+  
+  
     score += 1
 else:
     print("wrong asnwer")
