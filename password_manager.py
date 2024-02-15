@@ -39,6 +39,7 @@ while True:
         view()
 
     elif mode == "add":
+
         add()
     else:
         print("invaild mode. ")
