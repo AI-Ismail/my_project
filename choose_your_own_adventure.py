@@ -1,3 +1,5 @@
+import numpy as np
+
 name = input("Type your Name: ")
 print("Welcome to ", name, "to this adventure game")
 answer = input(
@@ -11,7 +13,6 @@ if answer == "left":
         print("you walk many miles you ran out of water and you lost a game")
     else:
         print("not a valid option")
-
 
 elif answer == "right":
     answer = input("you came to bridge you want cross it or head back it(cross/back)")
