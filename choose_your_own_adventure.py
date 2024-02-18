@@ -12,6 +12,7 @@ if answer == "left":
     else:
         print("not a valid option")
 
+
 elif answer == "right":
     answer = input("you came to bridge you want cross it or head back it(cross/back)")
     if answer == "back":
