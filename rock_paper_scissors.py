@@ -20,7 +20,7 @@ while True:
     print("Computer picked", computer_pick + ".")
     if user_input == computer_pick:
         print("it'is a draw")
-        draw =+ 1
+        draw = +1
 
     elif user_input == "rock" and computer_pick == "scissors":
         print("You won!")
@@ -33,17 +33,15 @@ while True:
     elif user_input == "scissors" and computer_pick == "paper":
         print("You won!")
         user_wins += 1
-  #  elif user_input == "rock" and computer_pick == "rock":
+    #  elif user_input == "rock" and computer_pick == "rock":
     #    print("draw")
-        # draw += 1
-   # elif user_input == "paper" and computer_pick == "paper":
-     #   print("draw")
-        # draw += 1
+    # draw += 1
+    # elif user_input == "paper" and computer_pick == "paper":
+    #   print("draw")
+    # draw += 1
     # elif user_input == "scissors" and computer_pick == "scissors":
     #     print("draw")
     #     draw += 1
-    
-
 
     else:
         print("You lost!")
@@ -51,5 +49,5 @@ while True:
 
 print("You won", user_wins, "times.")
 print("The computer won", computer_wins, "times.")
-print("game is draw", draw , "times." )
+print("game is draw", draw, "times.")
 print("Goodbye!")
