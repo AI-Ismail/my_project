@@ -1,4 +1,5 @@
 import random
+
 top_of_range = input("Type a number: ")
 if top_of_range.isdigit():
     top_of_range = int(top_of_range)
@@ -25,4 +26,4 @@ while True:
         print("You are above the number")
     else:
         print("You are below the number")
-print("yoy got it in", gasses, "gasses" )
+print("yoy got it in", gasses, "gasses")
