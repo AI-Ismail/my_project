@@ -1,29 +1,33 @@
 repos:
   - repo: https://github.com/psf/black-pre-commit-mirror
-    rev: 24.2.0 # Use the correct version tag or branch name
+    rev: 24.2.0
     hooks:
       - id: black
 
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.5.0  # Adjust the version as needed
+    rev: v4.5.0
     hooks:
       - id: trailing-whitespace
         language_version: python3
-        args: []  # No arguments needed to remove trailing whitespace
+        args: []
 
   - repo: https://github.com/PyCQA/flake8
-    rev:  7.0.0
+    rev: 7.0.0
     hooks:
       - id: flake8
 
-
   - repo: https://github.com/pre-commit/mirrors-mypy
-    rev: v1.8.0 # Use the latest version of mypy
+    rev: v1.8.0
     hooks:
       - id: mypy
 
   - repo: https://github.com/PyCQA/docformatter
     rev: v1.7.1
- # Use the latest version of docformatter
     hooks:
       - id: docformatter
+
+  - repo: https://github.com/myint/autoflake
+    rev: v1.4
+    hooks:
+      - id: autoflake
+        additional_dependencies: [autoflake==1.4]
