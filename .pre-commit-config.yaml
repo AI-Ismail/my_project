@@ -20,7 +20,7 @@ repos:
 
 # (Optional) Add flake8 or pylint if needed
 - repo: https://github.com/PyCQA/pylint
-  rev:  v3.0.3
+  rev: v3.0.3
   hooks:
   - id: pylint
     args: ["--select=unused-import"]  # Focus on unused imports
