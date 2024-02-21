@@ -1,23 +1,26 @@
 repos:
-  - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.5.0
-    hooks:
-      - id: trailing-whitespace
-      - id: end-of-file-fixer
-      # Add other hooks here
-  - repo: https://github.com/psf/black-pre-commit-mirror
-    rev: 24.2.0
-    hooks:
-      - id: black
+- repo: https://github.com/pre-commit/pre-commit-hooks
+  rev: v4.5.0
+  hooks:
+  - id: trailing-whitespace
+  - id: end-of-file-fixer
 
-  - repo: https://github.com/PyCQA/autoflake
-    rev: v2.3.0
-    hooks:
-      - id: autoflake
-        args: ["--remove-all-unused-imports", "--in-place", "--exclude=__init__.py"]
-  - repo: https://github.com/PyCQA/docformatter
-    rev: v1.7.5
-    hooks:
-      - id: docformatter
-additional_dependencies:
-  - pre-commit-autofix
+- repo: https://github.com/psf/black-pre-commit-mirror
+  rev: 24.2.0
+  hooks:
+  - id: black
+
+- repo: https://github.com/PyCQA/autoflake
+  rev: v2.2.1  # Or the latest stable version
+  hooks:
+  - id: autoflake  # Ensure it's enabled
+    args:
+    - --remove-all-unused-variables  # Remove non-private imports if desired
+    - --ignore-names="^_"  # Ignore private names starting with _ (optional)
+
+# (Optional) Add flake8 or pylint if needed
+- repo: https://github.com/PyCQA/pylint
+  rev:  v3.0.3
+  hooks:
+  - id: pylint
+    args: ["--select=unused-import"]  # Focus on unused imports
