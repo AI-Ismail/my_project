@@ -1,3 +1,5 @@
+pass
+
 print("welcome to my computer")
 playing = input("Do you want to play? ")
 if playing.lower() != "yes":
