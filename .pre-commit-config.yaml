@@ -14,4 +14,8 @@ repos:
   rev: v2.3.0
   hooks:
     - id: autoflake
-      args: ["--remove-all-unused-imports", "--in-place", "--exclude=__init__.py", "--remove-unused-variables", "--remove-unused-variables", "--ignore-init-module-imports", "--remove-duplicate-keys", "--ignore-pass-statements", "--ignore-pass-after-docstring"]
+      args:
+        - "--in-place"
+        - "--expand-star-imports"
+        - "--remove-duplicate-keys"
+        - "--remove-unused-variables"
