@@ -1,5 +1,3 @@
-import numpy as np
-
 name = input("Type your Name: ")
 print("Welcome to ", name, "to this adventure game")
 answer = input(
