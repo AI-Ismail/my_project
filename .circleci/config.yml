@@ -1,29 +1,16 @@
+# https://circleci.com/docs/2.0/config-intro/
+
 version: 2.1
-orbs:
-  slack: circleci/slack@4.9.3
+
 jobs:
-  notify:
+  test:
     docker:
-      - image: 'cimg/base:stable'
+      - image: cimg/node:16.8.0-browsers
     steps:
-      - slack/notify:
-          custom: |
-            {
-              "blocks": [
-                {
-                  "type": "section",
-                  "fields": [
-                    {
-                      "type": "plain_text",
-                      "text": "*This is a text notification*",
-                      "emoji": true
-                    }
-                  ]
-                }
-              ]
-            }
-          event: always
+      - checkout
+      - run: echo "Running example step, please edit this file"
+
 workflows:
-  send-notification:
+  test-flow:
     jobs:
-      - notify
+      - test

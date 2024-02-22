@@ -33,12 +33,19 @@ def view():
                 return
             for line in lines:
                 data = line.rstrip()
+                if "|" not in data:
+                    print("Invalid format in passwords file:", data)
+                    continue  # Skip to the next line
                 user, passw = data.split("|")
-                print(
-                    "user:", user, "| password:", fer.decrypt(passw.encode()).decode()
-                )
+                try:
+                    decrypted_pass = fer.decrypt(passw.encode()).decode()
+                    print("user:", user, "| password:", decrypted_pass)
+                except Exception as e:
+                    print("Error decrypting password:", e)
     except FileNotFoundError:
-        print("Password file not found.")
+        print("Password file not found. Creating a new one.")
+        with open("passwords.txt", "w") as f:
+            pass  # Just creating the file
 
 
 # Function to add passwords
@@ -57,12 +64,12 @@ while True:
     ).lower()
     if mode == "q":
         break
-    elif mode == "view":
+    if mode == "view":
         view()
     elif mode == "add":
         add()
     else:
-        print("Invalid mode.")
+        print("Invalid mode")
 
     """def write_key():
     key = Fernet.generate_key()

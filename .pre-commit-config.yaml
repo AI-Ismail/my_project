@@ -11,16 +11,7 @@ repos:
   - id: black
 
 - repo: https://github.com/PyCQA/autoflake
-  rev: v2.2.1  # Or the latest stable version
+  rev: v2.3.0
   hooks:
-  - id: autoflake  # Ensure it's enabled
-    args:
-    - --remove-all-unused-variables  # Remove non-private imports if desired
-    - --ignore-names="^_"  # Ignore private names starting with _ (optional)
-
-# (Optional) Add flake8 or pylint if needed
-- repo: https://github.com/PyCQA/pylint
-  rev: v3.0.3
-  hooks:
-  - id: pylint
-    args: ["--select=unused-import"]  # Focus on unused imports
+    - id: autoflake
+      args: ["--remove-all-unused-imports", "--in-place", "--exclude=__init__.py", "--remove-unused-variables", "--remove-unused-variables", "--ignore-init-module-imports", "--remove-duplicate-keys", "--ignore-pass-statements", "--ignore-pass-after-docstring"]
